@@ -1,0 +1,12 @@
+
+textarea {
+    position: relative;
+    left: 40%;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+}
+.add-button{
+    position: relative;
+    left: 40%;
+}

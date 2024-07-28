@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Notes(props){
+function Notes(props) {
 
-    return(
+    const handleRemove = (index) => {
+        props.setNotes(props.notes.filter((_, i) => i !== index));
+    };
+
+    return (
         <div>
-            {props.notes.map((value,index)=>{return (<p key={index}>{value}</p>);})}
+            {props.notes.map((value, index) => (
+                <button
+                    key={index}
+                    onClick={() => handleRemove(index)}
+                >
+                    {value}
+                </button>
+            ))}
         </div>
-
     );
 }
 

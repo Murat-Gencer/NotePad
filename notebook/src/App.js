@@ -9,13 +9,17 @@ function App() {
       return ([...notes,note]);
     })
   }
+
+
   return (
     <div className="App">
       <Input
         addNote={addNewNote}
       />
       <Notes
-      notes={noteList} />
+      notes={noteList} 
+      setNotes={setNoteList}
+      />
     </div>
   );
 }
